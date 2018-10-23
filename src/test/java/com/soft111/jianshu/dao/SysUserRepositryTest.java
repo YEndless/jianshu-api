@@ -14,25 +14,28 @@ public class SysUserRepositryTest {
     @Resource
     private SysUserRepositry sysUserRepositry;
 
-//    @Test
-//    public void addUser(){
-//        SysUser sysUser = new SysUser(1,"aaa@qq.com","aaa","ywy","one.png","aaaaaaaaaaaaaaaaaaaaa",111,222);
-//    }
-//    private Integer userId;
-//    private String email;
-//    private String password;
-//    private String nickname;
-//    private String avatar;
-//    private String description;
-//    private Integer wordsCount;
-//    private Integer likeCount;
+    @Test
+    public void addUser(){
+//        SysUser sysUser = new SysUser("aaa@qq.com","aaa","ywy","one.png",
+// "aaaaaaaaaaaaaa",15554,666);
+
+        SysUser sysUser=SysUser.builder()
+                .email("ccc@qq.com")
+                .password("ccc")
+                .nickname("yyy")
+                .avatar("three.png")
+                .description("ccccc")
+                .wordsCount(21264)
+                .likeCount(5122)
+                .build();
+        sysUserRepositry.save(sysUser);
+        System.out.println(sysUser);
+    }
     @Test
     public void findSysUserByEmail() {
         SysUser sysUser = sysUserRepositry.findSysUserByEmail("aaa@qq.com");
         if (sysUser != null) {
             System.out.println(sysUser);
-        }else{
-            System.out.println("qqqq");
         }
     }
 }
