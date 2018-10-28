@@ -7,6 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -37,5 +38,11 @@ public class SysUserRepositryTest {
         if (sysUser != null) {
             System.out.println(sysUser);
         }
+    }
+
+    @Test
+    public void findHotUsers() {
+        List<SysUser>sysUserList=sysUserRepositry.findHotUsers();
+        sysUserList.forEach(sysUser -> System.out.println(sysUser));
     }
 }
