@@ -21,13 +21,13 @@ public class SysUserRepositryTest {
 // "aaaaaaaaaaaaaa",15554,666);
 
         SysUser sysUser=SysUser.builder()
-                .email("ccc@qq.com")
-                .password("ccc")
-                .nickname("yyy")
-                .avatar("three.png")
-                .description("ccccc")
-                .wordsCount(21264)
-                .likeCount(5122)
+                .email("ddd@qq.com")
+                .password("ddd")
+                .nickname("夜未央")
+                .avatar("http://pggwbgcbl.bkt.clouddn.com/5.png")
+                .description("光年之外")
+                .wordsCount(2364)
+                .likeCount(5422)
                 .build();
         sysUserRepositry.save(sysUser);
         System.out.println(sysUser);
